@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"> -->
+    <style>
+        /* Small screens (e.g., smartphones) */
+    @media (max-width: 768px) {
+    /* Style rules for small screens */
+    .container {
+        width: 90%; /* Make container more narrow */
+    }
+    .sidebar {
+        display: none; /* Hide sidebar on small screens */
+    }
+    }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin-left: 40px;
+            padding: 0;
+            background: linear-gradient(135deg, #f0f8ff, #e6ffe6); /* Softer pastel gradient */
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #3e8e41); /* Keep the green gradient */
+            color: white;
+            text-align: center;
+            padding: 2rem 0; /* Increased padding for more space */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #3e858e; /* Use a vibrant green for headings */
+        }
+
+        p {
+            color: #555; /* Slightly darker text for better readability */
+        }
+
+        ul {
+            list-style-type: disc; /* Simple disc bullet points */
+            margin-left: 20px;
+        }
+
+        footer {
+            background-color: #f0f8ff; /* Light blue background for footer */
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        a {
+            color: #3e8e41; /* Green for links */
+            text-decoration: none;
+        }
+        .blog-post-image {
+            max-width: 80%; 
+            margin: 20px auto; 
+            display: block; 
+            width: 600px; /* Set maximum width for the image */
+            height: auto; /* Maintain aspect ratio */
+            border: 3px solid #2e7d32;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2)
+        }
+            .container {
+            display: flex;
+            align-items: center;
+            gap: 20px; /* Adds space between the image and text */
+        }
+        img {
+            max-width: 200px;
+            height: auto;
+        }
+        main {
+    padding-left: 30px;
+}
+.blog-post-chart {
+            max-width: 50%; 
+            margin: 20px auto; 
+            display: block; 
+            width: auto; /* Set maximum width for the image */
+            height: auto; /* Maintain aspect ratio */
+            border: 3px solid #75b9e0;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2)
+        }
+    </style>    
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 style="color: yellow;">Unlocking Insights: Predicting Subscription Outcomes for Banking Campaigns</h1>
+    </header>
+    <main>
+        <div class="container">
+            <img src="../static/telemarketing.jpg" alt="fn" class="blog-post-image">
+        <section id="introduction" >
+            <h2>Introduction</h2>
+            
+            <p>Direct marketing campaigns play a crucial role in customer engagement, particularly in the banking sector. This blog dives into a project analyzing phone-based direct marketing campaigns aimed at promoting bank term deposits. The goal? To build a robust predictive model that forecasts whether a client will subscribe to the product.</p>
+        </section>
+    </div>
+        <section id="dataset">
+            <h2>Dataset Overview</h2>
+            <p>The dataset used for this project offers comprehensive information, including:</p>
+            <ul>
+                <li><strong>Client Demographics:</strong> Age, job type, marital status, education, etc.</li>
+                <li><strong>Campaign Details:</strong> Last contact duration, day, month, and communication type.</li>
+                <li><strong>Historical Interactions:</strong> Outcomes of previous campaigns.</li>
+                <li><strong>Target Variable:</strong> Whether the client subscribed ('yes') or not ('no').</li>
+            </ul>
+        </section>
+
+        <section id="evaluation-metric">
+            <h2>Why the F1 Score (Macro)?</h2>
+            <p>The F1 Score (Macro) was chosen as the evaluation metric to:</p>
+            <ol>
+                <li>Balance the performance evaluation across both classes ('yes' and 'no').</li>
+                <li>Address potential class imbalance effectively, ensuring both positive and negative predictions are treated fairly.</li>
+            </ol>
+        </section>
+
+        <section id="workflow">
+            <h2>Project Workflow</h2>
+            <h3>1. Data Preprocessing</h3>
+            <ul>
+                <li>Handling missing values and replacing outliers for a clean dataset.</li>
+                <li>Encoding categorical variables for machine learning compatibility.</li>
+                <li>Scaling features where necessary to ensure consistent model behavior.</li>
+            </ul>
+
+            <h3>2. Model Development</h3>
+            <ul>
+                <li>Implementing advanced classifiers like GradientBoostingClassifier, Decision Trees, and AdaBoost.</li>
+                <li>Incorporating a Multi-Layer Perceptron (MLP) for deeper learning.</li>
+                <li>Performing hyperparameter tuning for optimized results.</li>
+            </ul>
+
+            <h3>3. Evaluation</h3>
+            <ul>
+                <li>Validating the models on a holdout dataset using the F1 Score (Macro).</li>
+                <li>Comparing performances to identify the best model.</li>
+            </ul>
+
+            <h3>4. Submission</h3>
+            <p>Generating predictions in the required format:</p>
+            <pre>
+ID    Target
+1     yes
+2     no
+3     yes
+            </pre>
+            <p>Submitting predictions for evaluation.</p>
+        </section>
+
+        <section id="technologies">
+            <h2>Technologies and Tools</h2>
+            <ul>
+                <li><strong>Programming Language:</strong> Python</li>
+                <li><strong>Libraries:</strong>
+                    <ul>
+                        <li>Scikit-learn for machine learning.</li>
+                        <li>NumPy and Pandas for data manipulation.</li>
+                        <li>Matplotlib and Seaborn for visualizations.</li>
+                    </ul>
+                </li>
+                <li><strong>Tools:</strong> Jupyter Notebook for interactive development.</li>
+            </ul>
+        </section>
+
+        <section id="results">
+            <h2>Results</h2>
+                <!-- <li>By using the above workflow, the project achieves a competitive F1 Score (Macro) of 0.78, demonstrating its effectiveness in predicting client subscription outcomes. Key insights from feature importance analysis also reveal the most influential factors driving client decisions.</li> -->
+                <div class="container">
+            <ul>
+
+                <li>By using the above workflow, the project achieves a competitive F1 Score (Macro) of 0.78, demonstrating its effectiveness in predicting client subscription outcomes. Key insights from feature importance analysis also reveal the most influential factors driving client decisions.</li>
+
+                            <li>Further it was noted that Clients who subscribed to past offers demonstrated a high propensity to subscribe to current ones.</li>
+                        </ul>
+                    <img src="pie.png" alt="" class="blog-post-chart">
+                </div>
+            
+            
+
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+            <p>This project underscores the power of predictive analytics in transforming direct marketing campaigns. By leveraging machine learning models like Gradient Boosting and MLP, financial institutions can enhance campaign outcomes and streamline customer targeting. </p>
+            <p>Looking forward, integrating more advanced techniques or additional data sources can further improve prediction accuracy and insights.</p>
+        </section>
+    </main>
+</body>
+
+</html>
