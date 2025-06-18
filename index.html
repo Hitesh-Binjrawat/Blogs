@@ -1,82 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resume - Your Name</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f7f9fc;
-      color: #333;
-    }
-    .container {
-      max-width: 800px;
-      margin: 40px auto;
-      background: #fff;
-      padding: 30px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 10px;
-    }
-    h1, h2 {
-      border-bottom: 2px solid #eee;
-      padding-bottom: 5px;
-    }
-    .section {
-      margin-top: 30px;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    .title {
-      font-weight: bold;
-    }
-    .date {
-      float: right;
-      font-style: italic;
-      color: #777;
-    }
-    .contact {
-      margin-bottom: 20px;
-    }
-    .contact span {
-      display: block;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <title>My Blog</title>
+  <link rel="stylesheet" href="Stylesheets/style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Hitesh Binjrawat</h1>
-
-
-    <div class="section">
-      <h2>Skills</h2>
-      <ul>
-        <li>Languages: Python, C++, JavaScript</li>
-        <li>Frameworks: Flask, Sklearn, Pytorch, Vue.js</li>
-        <li>Tools: Git, VS Code</li>
-      </ul>
+  <div class="header">
+    <h2>My Blog</h2>
+    <p>Insights, stories, and more</p>
+  </div>
+  <div class="row">
+    <div class="leftcolumn">
+      <div class="card">
+        <h2><a href="firstblog.html">First Article Title</a></h2>
+        <h5>Short description, June 18, 2025</h5>
+        <p>Summary or intro to the article...</p>
+      </div>
+      <div class="card">
+        <h2><a href="secondblog.html">Second Article Title</a></h2>
+        <h5>Another description, June 10, 2025</h5>
+        <p>Another summary or intro...</p>
+      </div>
+      <!-- Repeat for more articles -->
     </div>
-
-    <div class="section">
-      <h2>Projects</h2>
-      <ul>
-        <li>
-          <div class="title">Grocery Store APp</div>
-          <p>Built a web app using Flask and SQLite to manage student records, including login and authentication.</p>
-        </li>
-        <li>
-          <div class="title">Library Management App</div>
-          <p>Created a personal portfolio website using HTML, CSS, and GitHub Pages.</p>
-        </li>
-      </ul>
+    <div class="rightcolumn">
+      <div class="card">
+        <h2>About Me</h2>
+        <p>Short bio or info about you.</p>
+      </div>
+      <div class="card">
+        <h3>Popular Posts</h3>
+        <ul>
+          <li><a href="articles/article1.html">First Article Title</a></li>
+          <li><a href="articles/article2.html">Second Article Title</a></li>
+        </ul>
+      </div>
     </div>
+  </div>
+  <div class="footer">
+    <h2>Footer</h2>
+    <p>Copyright © 2025 Your Name</p>
   </div>
 </body>
 </html>
